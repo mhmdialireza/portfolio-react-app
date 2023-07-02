@@ -37,8 +37,6 @@
   margin-right: 1rem;
 }
 
-/* Start DropDown Styles */
-
 .main-header__dropdown {
   position: absolute;
   top: 5.5rem;
@@ -73,8 +71,6 @@
 .main-header__dropdown-link:hover {
   color: #1e83f0;
 }
-
-/* Finish DropDown Styles */
 
 .main-header__left {
   display: flex;
@@ -133,5 +129,3 @@
   background-color: var(--primary-color);
   color: var(--white-color);
 }
-
-/* Finish Navbar Styles */
