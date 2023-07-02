@@ -9,6 +9,7 @@ const AboutUs = () => {
         <SectionHeader
           title="ما چه کمکی بهتون میکنیم؟"
           desc="از اونجایی که آکادمی آموزشی سبزلرن یک آکادمی خصوصی هست"
+          btnHref="/courses"
         />
 
         <div class="container">
