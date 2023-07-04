@@ -3,7 +3,9 @@ import {
     Course,
     Category,
     Article,
-    Courses
+    Courses,
+    Login,
+    Register
 } from "./pages";
 
 const routes = [
@@ -12,6 +14,8 @@ const routes = [
     { path: '/courses', element: <Courses /> },
     { path: '/category/:categoryName', element: <Category /> },
     { path: '/article/:ArticleName', element: <Article /> },
+    { path: '/login', element: <Login /> },
+    { path: '/register', element: <Register /> },
 ]
 
 export default routes;
