@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { memo, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import './top-bar.css'
@@ -52,4 +52,4 @@ const TopBar = () => {
   );
 }
 
-export default TopBar
+export default memo(TopBar)

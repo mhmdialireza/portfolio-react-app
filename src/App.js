@@ -12,13 +12,13 @@ const App = () => {
 
   const router = useRoutes(routes)
 
-  const login = useCallback((userInfo, token) => {
+  const login = (userInfo, token) => {
     console.log('token', token)
     setToken(token);
     setIsLoggedIn(true);
     setUserInfo(userInfo);
     localStorage.setItem("user", JSON.stringify({ token }));
-  }, []);
+  };
 
   const logout = useCallback(() => {
     setToken(null);
