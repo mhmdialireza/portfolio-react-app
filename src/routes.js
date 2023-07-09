@@ -5,17 +5,23 @@ import {
     Article,
     Courses,
     Login,
-    Register
+    Register,
+    Articles
 } from "./pages";
 
 const routes = [
     { path: '/', element: <Home /> },
-    { path: '/course/:courseName', element: <Course /> },
-    { path: '/courses', element: <Courses /> },
-    { path: '/category/:categoryName', element: <Category /> },
-    { path: '/article/:ArticleName', element: <Article /> },
+    { path: '/course-info/:courseName', element: <Course /> },
+    { path: "/courses/:page", element: <Courses /> },
+    { path: "/category-info/:categoryName/:page", element: <Category /> },
+    { path: '/article-info/:articleName', element: <Article /> },
+    { path: "/articles/:page", element: <Articles /> },
+    // { path: "/search/:value", element: <Search /> },
+    // { path: "/contact", element: <Contact /> },
     { path: '/login', element: <Login /> },
     { path: '/register', element: <Register /> },
+
+
 ]
 
 export default routes;

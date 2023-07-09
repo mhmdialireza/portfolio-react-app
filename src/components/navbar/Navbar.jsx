@@ -1,4 +1,4 @@
-      import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import './navbar.css'
 import AuthContext from '../../context/authContext'
 import { Link } from 'react-router-dom'
@@ -33,9 +33,9 @@ const Navbar = () => {
                 </a>
               </li>
 
-              {allMenus.map((menu) => (
-                <li className="main-header__item">
-                  <Link to={menu.href} className="main-header__link">
+              {allMenus.map((menu, index) => (
+                <li className="main-header__item" key={index}>
+                  <Link to={`${menu.href}/1`} className="main-header__link">
                     {menu.title}
                     {menu.submenus.length !== 0 && (
                       <>
@@ -77,11 +77,15 @@ const Navbar = () => {
 
             {authContext.isLoggedIn ? (
               <Link to="#" className="main-header__profile">
-                <span className="main-header__profile-text">{authContext.userInfo.name}</span>
+                <span className="main-header__profile-text">
+                  {authContext.userInfo.name}
+                </span>
               </Link>
             ) : (
               <Link to="/login" className="main-header__profile">
-                <span className="main-header__profile-text">ورود / ثبت نام</span>
+                <span className="main-header__profile-text">
+                  ورود / ثبت نام
+                </span>
               </Link>
             )}
           </div>

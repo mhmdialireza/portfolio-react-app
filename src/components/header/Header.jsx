@@ -2,7 +2,7 @@ import { Landing, Navbar, TopBar } from './../../components'
 
 const Header = () => {
     return (
-        <header class="header">
+        <header className="header">
             <TopBar />
             <Navbar />
             <Landing />

@@ -1,8 +1,19 @@
+import { useEffect, useState } from "react";
 import { SectionHeader, ArticleBox } from "./../../components";
 
 import "./last-articles.css";
 
 const LastArticles = () => {
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://localhost:4000/v1/articles`)
+      .then((res) => res.json())
+      .then((allArticles) => {
+        setArticles(allArticles);
+      });
+  }, []);
+
   return (
     <section className="articles">
       <div className="container">
@@ -10,26 +21,14 @@ const LastArticles = () => {
           title="جدیدترین مقاله ها"
           desc="پیش به سوی ارتقای دانش"
           btnTitle="تمامی مقاله ها"
-          btnHref="/courses"
+          btnHref='articles/1'
         />
 
         <div className="articles__content">
           <div className="row">
-            <ArticleBox
-              title="نحوه نصب کتابخانه در پایتون | آموزش نصب کتابخانه پایتون"
-              cover="images/blog/3.jpg"
-              desc="زبان پایتون هم مانند دیگر زبان­های برنامه نویسی رایج، دارای کتابخانه های مختلفی برای تسریع..."
-            />
-            <ArticleBox
-              title="نحوه نصب کتابخانه در پایتون | آموزش نصب کتابخانه پایتون"
-              cover="images/blog/3.jpg"
-              desc="زبان پایتون هم مانند دیگر زبان­های برنامه نویسی رایج، دارای کتابخانه های مختلفی برای تسریع..."
-            />
-            <ArticleBox
-              title="نحوه نصب کتابخانه در پایتون | آموزش نصب کتابخانه پایتون"
-              cover="images/blog/3.jpg"
-              desc="زبان پایتون هم مانند دیگر زبان­های برنامه نویسی رایج، دارای کتابخانه های مختلفی برای تسریع..."
-            />
+            {articles.slice(0, 3).map((article) => (
+              <ArticleBox {...article} key={article._id} />
+            ))}
           </div>
         </div>
       </div>
