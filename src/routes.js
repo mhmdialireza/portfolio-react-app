@@ -7,7 +7,8 @@ import {
     Login,
     Register,
     Articles,
-    Contact
+    Contact,
+    Search,
 } from "./pages";
 
 const routes = [
@@ -17,7 +18,7 @@ const routes = [
     { path: "/category-info/:categoryName/:page", element: <Category /> },
     { path: '/article-info/:articleName', element: <Article /> },
     { path: "/articles/:page", element: <Articles /> },
-    // { path: "/search/:value", element: <Search /> },
+    { path: "/search/:value", element: <Search /> },
     { path: "/contact", element: <Contact /> },
     { path: '/login', element: <Login /> },
     { path: '/register', element: <Register /> },

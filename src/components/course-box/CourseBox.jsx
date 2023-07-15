@@ -1,12 +1,12 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { CircleSpinner } from './../../components'
 
 import "./course-box.css";
-import { Link } from "react-router-dom";
 
 const CourseBox = (props) => {
   const [isImgShow, setIsImgShow] = useState(false);
-  
+
   const onImageLoaded = () => setIsImgShow(true);
 
   const onImageError = () => {

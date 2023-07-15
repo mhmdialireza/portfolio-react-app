@@ -88,19 +88,21 @@ const Category = () => {
                     <div className="courses-top-bar">
                       <div className="courses-top-bar__right">
                         <div
-                          className={`courses-top-bar__row-btn ${coursesDisplayType === "row"
+                          className={`courses-top-bar__row-btn ${
+                            coursesDisplayType === "row"
                               ? "courses-top-bar__icon--active"
                               : ""
-                            }`}
+                          }`}
                           onClick={() => setCoursesDisplayType("row")}
                         >
                           <i className="fas fa-border-all courses-top-bar__icon"></i>
                         </div>
                         <div
-                          className={`courses-top-bar__column-btn ${coursesDisplayType === "column"
+                          className={`courses-top-bar__column-btn ${
+                            coursesDisplayType === "column"
                               ? "courses-top-bar__icon--active"
                               : ""
-                            }`}
+                          }`}
                           onClick={() => setCoursesDisplayType("column")}
                         >
                           <i className="fas fa-align-left courses-top-bar__icon"></i>
